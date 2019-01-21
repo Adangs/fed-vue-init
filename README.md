@@ -9,6 +9,38 @@
 状态（.z-）：为状态类样式加入前缀，统一标识，方便识别，她只能组合使用或作为后代出现（.u-ipt.z-dis{}，.m-list li.z-sel{}），具体详见命名规则的扩展相关项。
 JS  （.js-）：为js绑定加入前缀，统一标识，方便识别，她只能用于绑定js相关内容，不做任务样式绑定！
 ```
+
+### 目录结构
+```
+- public            
+  - index.html
+- src               // vue主目录
+  - api             // api
+    - index.js          // api map
+  - assets          // 主静态资源目录
+    - iconfont          // iconfont
+    - images            // images
+    - style             // less、scss、css
+      - index.less          // 主入口
+  - components      // 全局通用组件
+    - x-null            // 命名规则：以单字母或者3字母内开头，使用`-`代替驼峰命名；例：x-null
+    - index.js          // 导出所有全局组件
+  - router          // 路由
+  - store           // vuex
+    - modules           // 新vuex modules
+      - app.js              // 对modules进行分类，namespaced: true；调用方式store.dispatch('app/setLoading', true)
+      - index.js            // 导出modules
+    - getters.js        // 选择性导出业务所需 state
+    - index.js      // 导出
+  - utils           // 工具目录
+    - filters.js        // 全局过滤器
+    - request.js        // 全局http请求，this.$fetch({})
+  - views           // views
+    - layout            // 业务页面主框架
+      - components          // 业务私有组件，组件命名规则：以单字母或者3字母内开头，带上业务名称，使用`-`代替驼峰命名；例：x-layout-header
+README.md           // 项目概述
+```
+
 ## Project setup
 ```
 npm install
