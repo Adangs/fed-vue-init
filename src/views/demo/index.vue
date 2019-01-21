@@ -3,19 +3,21 @@
     <dl>
       <dt>filters</dt>
       <dd>
-        {{date | formatDate}}
+        {{ date | formatDate }}
       </dd>
     </dl>
     <dl>
       <dt>全局组件</dt>
       <dd>
-        <x-null/>
+        <x-null />
       </dd>
     </dl>
     <dl>
       <dt>全局请求</dt>
       <dd>
-        <button @click='onFetch'>{{loading ? '正在请求...' : '点击请求'}}</button>
+        <button @click="onFetch">
+          {{ loading ? '正在请求...' : '点击请求' }}
+        </button>
       </dd>
     </dl>
   </div>
@@ -25,7 +27,7 @@ import { mapGetters } from 'vuex'
 import { XNull } from '../../components'
 
 export default {
-  name: 'demo',
+  name: 'Demo',
   components: {
     XNull
   },
@@ -34,13 +36,13 @@ export default {
       date: new Date()
     }
   },
-  created () {
-
-  },
   computed: {
     ...mapGetters([
       'loading'
     ])
+  },
+  created() {
+
   },
   methods: {
     async onFetch() {

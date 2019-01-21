@@ -10,7 +10,7 @@
       <section class="g-layout-main">
         <!-- 主要内容 -->
         <transition name="fade" mode="out-in">
-          <router-view :key="key"/>
+          <router-view :key="key" />
         </transition>
       </section>
     </section>
@@ -18,17 +18,17 @@
 </template>
 <script>
 export default {
-  name: 'layout',
+  name: 'Layout',
   components: {
-
-  },
-  created () {
 
   },
   computed: {
     key() {
       return this.$route.fullPath
     }
+  },
+  created() {
+
   },
   methods: {
 

@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 Vue.use(Router)
-import Layout from "../views/layout/index"
+import Layout from '../views/layout/index'
 
 export default new Router({
   mode: 'history',
@@ -10,19 +10,19 @@ export default new Router({
   scrollBehavior: () => ({ y: 0 }),
   routes: [
     {
-      path: "/",
-      redirect: "/demo",
-      name: "home"
+      path: '/',
+      redirect: '/demo',
+      name: 'home'
     },
     {
-      path: "/demo",
+      path: '/demo',
       component: Layout,
       children: [
         {
-          path: "",
-          name: "demo",
+          path: '',
+          name: 'demo',
           component: () => import(/* webpackChunkName: "common" */ '../views/demo/index'),
-          meta: { title: "DEMO" }
+          meta: { title: 'DEMO' }
         }]
     }
   ]
