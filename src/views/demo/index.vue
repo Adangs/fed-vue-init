@@ -31,7 +31,7 @@ export default {
   components: {
     XNull
   },
-  data() {
+  data () {
     return {
       date: new Date()
     }
@@ -41,11 +41,11 @@ export default {
       'loading'
     ])
   },
-  created() {
+  created () {
 
   },
   methods: {
-    async onFetch() {
+    async onFetch () {
       console.log('开始请求')
       const res = await this.$fetch({
         url: 'UUID'

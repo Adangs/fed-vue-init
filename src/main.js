@@ -5,10 +5,10 @@ import store from './store/index'
 
 import './assets/style/index.less' // global css
 
-import fetch from './utils/request' // global request
-Vue.use(fetch)
+import fetch from './utils/request'
 
-import * as filters from './utils/filters' // global filters
+import * as filters from './utils/filters' // global request
+Vue.use(fetch) // global filters
 // register global utility filters.
 Object.keys(filters).forEach(key => {
   Vue.filter(key, filters[key])
@@ -16,10 +16,10 @@ Object.keys(filters).forEach(key => {
 
 // 全局滚动事件
 Vue.directive('xscroll', {
-  bind(el, binding) {
+  bind (el, binding) {
     const container = el.attributes['x-scroll-container']
     const selectWrap = container ? el.querySelector(container.nodeValue) : el
-    selectWrap.addEventListener('scroll', function() {
+    selectWrap.addEventListener('scroll', function () {
       const sign = el.attributes['xscroll-threshold'] ? el.attributes['xscroll-threshold'].nodeValue : 10
       const scrollDistance = this.scrollHeight - this.scrollTop - this.clientHeight
       if (scrollDistance <= sign) {

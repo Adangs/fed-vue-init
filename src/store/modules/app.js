@@ -10,7 +10,7 @@ export default {
   },
   actions: {
     // 全局请求状态
-    async setLoading({ commit, state }, data) {
+    async setLoading ({ commit, state }, data) {
       return new Promise((resolve, reject) => {
         commit('SET_LOADING', data)
         resolve(state)

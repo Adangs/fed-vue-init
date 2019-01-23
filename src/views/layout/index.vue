@@ -23,11 +23,11 @@ export default {
 
   },
   computed: {
-    key() {
+    key () {
       return this.$route.fullPath
     }
   },
-  created() {
+  created () {
 
   },
   methods: {

@@ -3,7 +3,7 @@ import store from '@/store'
 import API from '../api/index'
 
 export default {
-  install(Vue) {
+  install (Vue) {
     const fetch = options => {
       options = {
         loading: options.loading === undefined ? true : options.loading,

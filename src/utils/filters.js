@@ -1,5 +1,5 @@
 // set function parseTime,formatTime to filter
-export function formatDate(input, b = 'yyyy-MM-dd hh:mm:ss') {
+export function formatDate (input, b = 'yyyy-MM-dd hh:mm:ss') {
   if (!input) return '-'
   const date = new Date(Number(input) || (input.indexOf('T') !== -1 ? input : input.replace(/-/gi, '/')))
   const c = {
