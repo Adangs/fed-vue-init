@@ -1,13 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Layout from '@/views/layout/index'
+import Layout from '~@/views/layout/index'
 
 Vue.use(Router)
 
 export default new Router({
   mode: 'history',
-  base: process.env.BASE_URL,
-  scrollBehavior: () => ({ y: 0 }),
   routes: [
     {
       path: '/',
@@ -21,7 +19,7 @@ export default new Router({
         {
           path: '',
           name: 'demo',
-          component: () => import(/* webpackChunkName: "common" */ '@/views/demo/index'),
+          component: () => import(/* webpackChunkName: "common" */ '~@/views/demo/index'),
           meta: { title: 'DEMO' }
         }]
     }

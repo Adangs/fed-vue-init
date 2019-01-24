@@ -1,4 +1,6 @@
 // api接口map
 export default {
-  'UUID': 'http://rap2api.taobao.org/app/mock/120284/v3/verification/uuid' // 获取UUID
+  'success': '/api/v1/success', // success api demo
+  'error': '/api/v1/error', // error api demo
+  'page': '/api/v1/page' // page api demo
 }

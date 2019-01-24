@@ -5,10 +5,13 @@ import store from './store/index'
 
 import './assets/style/index.less' // global css
 
-import fetch from './utils/request'
+// global request
+import http from './utils/x-request'
 
 import * as filters from './utils/filters' // global request
-Vue.use(fetch) // global filters
+
+// request
+Vue.use(http)
 // register global utility filters.
 Object.keys(filters).forEach(key => {
   Vue.filter(key, filters[key])
