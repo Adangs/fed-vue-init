@@ -20,6 +20,13 @@
         </button>
       </dd>
     </dl>
+    <dl>
+      <dt>引用图片</dt>
+      <dd>
+        <p><img src="@/assets/images/logo.png" alt="logo"></p>
+        <p class="bg-img"></p>
+      </dd>
+    </dl>
   </div>
 </template>
 <script>
@@ -55,3 +62,7 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+  /*.bg-img{ width: 200px; height: 200px; background: url('@/assets/images/logo.png') no-repeat; background-size: cover}*/
+</style>
