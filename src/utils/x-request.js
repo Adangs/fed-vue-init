@@ -26,6 +26,7 @@ export default {
   install (Vue) {
     const http = options => {
       options = {
+        cancel: options.cancel === undefined ? true : options.cancel, // 重复请求拦截
         loading: options.loading === undefined ? true : options.loading, // 是否维护全局loading
         globalError: options.globalError === undefined ? true : options.globalError, // 统一进行错误处理
         timeout: options.timeout || 20000, // 超时
@@ -35,6 +36,7 @@ export default {
         params: options.params || {}, // get 方式参数,
         data: options.data || {} // post daata
       }
+      const CancelToken = axios.CancelToken
       // create an axios instance
       const service = axios.create({
         timeout: options.timeout // request timeout
@@ -42,6 +44,20 @@ export default {
       // request interceptor
       service.interceptors.request.use(
         request => {
+          // 请求取消机制
+          if (options.cancel) {
+            store.dispatch('app/removePending', {
+              url: options.url,
+              cancel: true
+            })
+            request.cancelToken = new CancelToken(cancel => {
+              // 这里的ajax标识我是用请求地址&请求方式拼接的字符串，当然你可以选择其他的一些方式
+              store.dispatch('app/pushPending', {
+                url: options.url,
+                cancel: cancel
+              })
+            })
+          }
           // 让每个请求携带token-- ['token']为自定义key 请根据实际情况自行修改
           request.headers['token'] = 'token'
           // 是否维护全局请求状态
@@ -66,6 +82,10 @@ export default {
          * 以下代码均为样例，请结合自生需求加以修改，若不需要，则可删除
          **/
         response => {
+          // 请求取消机制
+          store.dispatch('app/removePending', {
+            url: options.url
+          })
           const res = response.data
           // 全局请求状态
           store.dispatch('app/setLoading', false)
