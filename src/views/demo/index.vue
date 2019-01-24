@@ -64,5 +64,5 @@ export default {
 </script>
 
 <style lang="scss">
-  /*.bg-img{ width: 200px; height: 200px; background: url('@/assets/images/logo.png') no-repeat; background-size: cover}*/
+  .bg-img{ width: 200px; height: 200px; background: url('~@/assets/images/logo.png') no-repeat; background-size: cover}
 </style>
