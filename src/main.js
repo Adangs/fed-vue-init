@@ -8,7 +8,7 @@ import './assets/style/index.less' // global css
 // global request
 import http from './utils/x-request'
 
-import * as filters from './utils/filters' // global request
+import * as filters from './utils/x-filters' // global request
 
 // request
 Vue.use(http)
