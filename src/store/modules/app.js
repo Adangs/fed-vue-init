@@ -1,3 +1,5 @@
+import fetch from '@/utils/x-fetch'
+
 export default {
   namespaced: true,
   state: {
@@ -40,6 +42,14 @@ export default {
         }
         // console.log(Object.keys(state.pending))
         resolve(state)
+      })
+    },
+    // vuex内调用api
+    async getAPI ({ commit, state }, data) {
+      await fetch({
+        url: 'success'
+      }).then(res => {
+        console.log('in vuex... ', res)
       })
     }
   }

@@ -55,7 +55,7 @@ export default {
     ])
   },
   created () {
-
+    this.$store.dispatch('app/getAPI')
   },
   methods: {
     async onFetch () {
