@@ -1,4 +1,4 @@
-import fetch from '@/utils/x-fetch'
+import fetch from '~@/utils/x-fetch'
 
 export default {
   namespaced: true,
