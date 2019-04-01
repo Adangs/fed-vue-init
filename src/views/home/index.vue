@@ -27,7 +27,6 @@ export default {
   methods: {
     onLogin () {
       this.$store.dispatch('user/login').then(res => {
-        console.log(res)
         this.$router.push({ path: '/demo' })
       })
     }
