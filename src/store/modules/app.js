@@ -1,6 +1,6 @@
-import fetch from '~@/utils/x-fetch'
-import staticRoutes from '~@/router/static'
-import asyncRoutes from '~@/router/async'
+import fetch from '~/utils/x-fetch'
+import staticRoutes from '~/router/static'
+import asyncRoutes from '~/router/async'
 
 /**
  * 通过meta.role判断是否与当前用户权限匹配

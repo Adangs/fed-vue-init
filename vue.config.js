@@ -30,7 +30,7 @@ module.exports = {
   lintOnSave: true,
   chainWebpack: config => {
     config.resolve.alias
-      .set('~@', resolve('src')) // key,value自行定义
+      .set('~', resolve('src')) // key,value自行定义
   },
   // 设为false打包时不生成.map文件
   productionSourceMap: false,

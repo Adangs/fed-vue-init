@@ -1,4 +1,4 @@
-// import Layout from '~@/views/layout/index'
+// import Layout from '~/views/layout/index'
 
 export default [
   {
@@ -7,7 +7,7 @@ export default [
     name: 'home'
   }, {
     path: '/login',
-    component: () => import(/* webpackChunkName: "common" */ '~@/views/home/index'),
+    component: () => import(/* webpackChunkName: "common" */ '~/views/home/index'),
     name: 'login'
   }
 ]
