@@ -2,6 +2,7 @@ import axios from 'axios'
 import store from '~/store'
 import API from '~/api/index'
 /**
+ *
  调用request方法
  调用方式:
  方式一，只返回接口正确的状态数据，统一处理错误信息：
@@ -19,6 +20,7 @@ import API from '~/api/index'
  }).catch(err => {
    console.log(err)
  });
+ *
  */
 const http = options => {
   options = {
