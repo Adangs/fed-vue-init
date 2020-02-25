@@ -23,7 +23,7 @@ JS  （.js-）：为js绑定加入前缀，统一标识，方便识别，她只�
     - style             // less、scss、css
       - index.less          // 主入口
   - components      // 全局通用组件
-    - x-null            // 命名规则：以单字母或者3字母内开头，使用`-`代替驼峰命名；例：x-null
+    - x-empty            // 命名规则：以单字母或者3字母内开头，使用`-`代替驼峰命名；例：x-null
     - index.js          // 导出所有全局组件
   - router          // 路由
   - store           // vuex
@@ -65,6 +65,8 @@ npm run test
 ```
 npm run lint
 ```
+
+<img src='WechatIMG258.png'>
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
