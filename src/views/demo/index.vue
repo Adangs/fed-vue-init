@@ -9,19 +9,19 @@
     <dl>
       <dt>全局组件</dt>
       <dd>
-        <x-null />
+        <x-empty />
       </dd>
     </dl>
     <dl>
       <dt>全局请求</dt>
       <dd>
         <p>
-          <button @click="onFetch">
+          <el-button @click="onFetch">
             {{ loading ? '正在请求...' : '点击请求，快速点击重复请求会被拦截' }}
-          </button>
+          </el-button>
         </p>
         <p>
-          <button @click="onCancel">主动拦截某个请求</button>
+          <el-button @click="onCancel">主动拦截某个请求</el-button>
         </p>
       </dd>
     </dl>
@@ -36,13 +36,13 @@
 </template>
 <script>
 import { mapGetters } from 'vuex'
-import { XNull } from '../../components'
+import { XEmpty } from '../../components'
 import API from '~/api/index'
 
 export default {
   name: 'Demo',
   components: {
-    XNull
+    XEmpty
   },
   data () {
     return {
@@ -78,7 +78,6 @@ export default {
 </script>
 
 <style lang="scss">
-  button{ background: #ddd;}
   .bg-img{ width: 200px; height: 200px; background: url('../../assets/images/logo.png') no-repeat; background-size: cover}
   dd{
     p{ padding-bottom: 10px;}

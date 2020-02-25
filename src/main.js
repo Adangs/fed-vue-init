@@ -2,14 +2,17 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router/index'
 import store from './store/index'
+import ElementUI from 'element-ui'
 
+import 'element-ui/lib/theme-chalk/index.css'
 import './assets/style/index.less' // global css
 
 // global request
 import http from './utils/x-request'
 
 import * as filters from './utils/x-filters' // global request
-
+// ui
+Vue.use(ElementUI)
 // request
 Vue.use(http)
 // register global utility filters.

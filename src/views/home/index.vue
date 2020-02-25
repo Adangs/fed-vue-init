@@ -1,8 +1,8 @@
 <template>
   <ul class="m-login">
-    <li><input type="text" name="name" placeholder="用户名" v-model="formData.name"></li>
-    <li><input type="password" name="password" placeholder="密码" v-model="formData.password"></li>
-    <li><button @click="onLogin">登录</button></li>
+    <li><el-input type="text" name="name" placeholder="用户名" v-model="formData.name" /></li>
+    <li><el-input type="password" name="password" placeholder="密码" v-model="formData.password" /></li>
+    <li><el-button @click="onLogin">登录</el-button></li>
   </ul>
 </template>
 
@@ -38,10 +38,8 @@ export default {
   .m-login{
     width: 300px; margin: 0 auto; padding-top: 20%;
     li{ margin-bottom: 10px;}
-    input{ width: 100%; border: 1px solid #dcdcdc; padding: 5px 10px;}
     button{
-      width: 100%; border: 1px solid #dcdcdc; padding: 5px; background: #fafafa; cursor: pointer;
-      &:hover{ background: #eee;}
+      width: 100%;
     }
   }
 </style>
