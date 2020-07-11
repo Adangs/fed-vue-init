@@ -42,6 +42,8 @@ JS  （.js-）：为js绑定加入前缀，统一标识，方便识别，她只�
   - views           // views
     - layout            // 业务页面主框架
       - components          // 业务私有组件，组件命名规则：以单字母或者3字母内开头，带上业务名称，使用`-`代替驼峰命名；例：x-layout-header
+  App.vue   // vue主文件
+  main.js   // 项目入口文件
 README.md           // 项目概述
 ```
 
