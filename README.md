@@ -41,6 +41,19 @@ JS  （.js-）：为js绑定加入前缀，统一标识，方便识别，她只�
 README.md           // 项目概述
 ```
 
+## 环境安装
+
+### node npm 
+`https://nodejs.org/zh-cn/` 选择稳定版即可(node v12.x)
+
+### npm 切镜像
+全局安装 `nrm` 快捷切换npm镜像 `https://www.npmjs.com/package/nrm`
+
+`npm i nrm -g`
+
+`nrm ls` 切换到 `taobao`
+
+
 ## Project setup
 ```
 npm install
