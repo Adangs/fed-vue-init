@@ -1,6 +1,6 @@
 import axios from 'axios'
-import store from '~/store'
-import API from '~/api/index'
+import store from '@/store'
+import API from '@/api/index'
 import { Message } from 'element-ui'
 /**
  *

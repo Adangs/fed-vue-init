@@ -3,7 +3,7 @@
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,p,th,td,pre,code,form,fieldset,legend,input,textarea,blockquote,figure,button{ margin:0;padding:0;}
 article,aside,details,figcaption,figure,footer,header,main,nav,section,summary { display:block; }
 html{-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;}
-body{ font: 14px/1.44 Tahoma, Verdana, Arial, Roboto, 'Heiti SC', 'Hiragino Sans GB', '\5FAE\8F6F\96C5\9ED1', '\5b8b\4f53', sans-serif; color: #000; background: #fff;}
+body{ font: 14px/1.44 Tahoma, Verdana, Arial, Roboto, 'Heiti SC', 'Hiragino Sans GB', '\5FAE\8F6F\96C5\9ED1', '\5b8b\4f53', sans-serif; background-color: #FFF; color: #000;}
 button,input,select,textarea{ font:inherit; color:#333; line-height: 1.44; border: 0;outline: 0;}
 input[type="text"],input[type="password"],input[type="tel"],input[type="email"]{padding-left: 5px;}
 audio,canvas,progress,video{ display:inline-block; vertical-align:baseline; }
@@ -19,14 +19,15 @@ img,acronym,input,textarea,iframe,button{ vertical-align:middle;}
 input,button,textarea,select,optgroup,option{ resize:none; outline:none;}
 html,body,a,button,input,li,div,span,section{ -webkit-tap-highlight-color:transparent;}
 img{ max-width:100%;}
+a{ color: #40E3E6;}
 a,img{ -webkit-touch-callout: none;}
 a,button{ cursor:pointer;}
 input,textarea,select{-webkit-appearance: none;}
 input:-webkit-autofill{-webkit-box-shadow: 0 0 0 200px white inset;}
 
-::-webkit-scrollbar{ width:8px; height:8px;}
-::-webkit-scrollbar-track-piece{background-color:rgba(0,0,0,.05);}
+::-webkit-scrollbar{ width: 5px; height: 5px;}
+::-webkit-scrollbar-track-piece{background-color: rgba(0,0,0,0);}
 ::-webkit-scrollbar-thumb,
-::-webkit-scrollbar-thumb:vertical{height: 5px;background-color:rgba(0,0,0,.15); -webkit-border-radius: 10px;}
+::-webkit-scrollbar-thumb:vertical{ height: 5px;background-color: #CCC; -webkit-border-radius: 10px;}
 ::-webkit-scrollbar-thumb:hover,
-::-webkit-scrollbar-thumb:vertical:hover{ background-color:rgba(0,0,0,.2);}
+::-webkit-scrollbar-thumb:vertical:hover{ background-color: #999;}

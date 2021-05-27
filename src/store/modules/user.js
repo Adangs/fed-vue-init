@@ -1,5 +1,5 @@
-import fetch from '~/utils/x-fetch'
-import { setCookie, getCookie } from '~/utils/index'
+import fetch from '@/utils/x-fetch'
+import { setCookie, getCookie } from '@/utils/index'
 
 export default {
   namespaced: true,

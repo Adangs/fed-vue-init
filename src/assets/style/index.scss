@@ -1,0 +1,7 @@
+@import "./reset.scss";
+@import "./element-ui.scss";
+
+html, body, #app{ height: 100%;}
+
+.flex{ display: flex; align-content: center;}
+.flex-item{ flex: 1;}

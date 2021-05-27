@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import NProgress from 'nprogress' // progress bar
 import 'nprogress/nprogress.css'// progress bar style
-import { getCookie } from '~/utils/index'
+import { getCookie } from '@/utils/index'
 import staticRouter from './static' // 静态路由列表
 import store from '../store'
 

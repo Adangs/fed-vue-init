@@ -37,7 +37,7 @@
 <script>
 import { mapGetters } from 'vuex'
 import { XEmpty } from '../../components'
-import API from '~/api/index'
+import API from '@/api/index'
 
 export default {
   name: 'Demo',
